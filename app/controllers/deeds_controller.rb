@@ -25,15 +25,25 @@ post "/dogs/:dog_id/deeds" do
   end
 end
 
+patch "/deeds/:id" do
+  find_deed
+  if @deed.update(params)
+    deed_to_json
+  else
+    deed_error_messages
+  end
+end
+
 delete "deeds/:id" do
   find_deed
   if @deed
     @deed.destroy
     @deed.to_json
   else
-    {errors:} ["Deeds Not Found"]
+    {errors: ["Deeds Not Found"]}.to_json
   end
 end
+
 
 private
 def find_deed
@@ -52,5 +62,6 @@ def deed_error_messages
   {errors: @deed.errors.full_message}.to_json
  end
 end
+
 
 
