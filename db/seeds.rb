@@ -1,10 +1,12 @@
 puts "🌱 Seeding spices..."
 
-dingo = Dog.create(name: "Dingo")
-riley = Dog.create(name: "Riley")
-jude = Dog.create(name: "Jude")
-spike = Dog.create(name: "Spike")
-snopp = Dog.create(name: "Snoop")
+dingo = Dog.create(name: "Dingo", breed: "Australian Cattle Dog")
+riley = Dog.create(name: "Riley", breed: "Akita")
+jude = Dog.create(name: "Jude", breed: "Labrodor")
+spike = Dog.create(name: "Spike", breed: "Pitbull")
+snopp = Dog.create(name: "Snoop", breed: "Frenchy")
+frank = Dog.create(name: "Snoop", breed: "Pug")
+
 
 
 hike = Deed.create(action: "Hike", category: "Exercise", dog_id: dingo.id)
