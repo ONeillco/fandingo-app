@@ -1,6 +1,6 @@
 puts "🌱 Seeding spices..."
 
-dingo = Dog.create(name: "Dingo", breed: "Australian Cattle Dog")
+dingo = Dog.create(name: "Dingo", breed: "Supermutt")
 riley = Dog.create(name: "Riley", breed: "Akita")
 jude = Dog.create(name: "Jude", breed: "Labrodor")
 spike = Dog.create(name: "Spike", breed: "Pitbull")
