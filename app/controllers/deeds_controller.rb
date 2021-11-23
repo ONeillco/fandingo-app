@@ -1,7 +1,7 @@
 class DeedsController < ApplicationController
 
   get "/deeds" do 
-    Deed.all.to_json(include: [dog: {only: [:id, :name]}], except: [:created_at, :updated_at])
+    Deed.all.to_json(include: [dog: {only: [:id, :name, :breed]}], except: [:created_at, :updated_at])
   end
 
   get "/dogs/:dog_id/deeds" do
